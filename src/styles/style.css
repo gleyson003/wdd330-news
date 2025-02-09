@@ -1,0 +1,129 @@
+:root {
+    --color1: #a4c3ec;   
+    --color2: #cacdd1;  
+    --color3: #661c1e;       
+    --color4: #8b634b;
+    --color5: #afa594;
+}
+
+main {
+    height: 800px;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color3) ;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav > a {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    color: var(--color2);
+    font-size: 25px;
+    padding: 20px;
+}
+
+nav > a:hover {
+    color: var(--color3);
+    background-color: var(--color2);
+    font-size: 30px;
+}
+
+#logo img {
+    display: block;
+    margin: 10px;
+    width: 120px;
+    height: 80px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+#social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.column {
+    text-align: center;
+}
+
+#footer div {
+    align-items: center;
+}
+
+#social img {
+    width: 60px;
+    border-radius: 20px;
+    display: flex;
+    margin: 0 auto;
+}
+
+@media (max-width: 705px) {
+    #social {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+    }
+
+    #social img {
+        width: 40px;
+        border-radius: 10px;
+    }
+
+    #footer {
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 10px;
+    }
+
+    .column {
+        font-size: small;
+    }
+}
+
+@media (max-width: 425px) {
+    #header {
+        grid-template-columns: 1fr;
+    }
+
+    #logo img {
+        display: flex;
+        margin: 5px auto 0px;
+        width: 70px;
+        height: 50px;
+    }
+
+    nav {
+        grid-row: 2 / 3;
+    }
+
+    nav > a {
+        margin: 0 auto;
+        font-size: 18px;
+        padding: 1px;
+    }
+
+    nav > a:hover {
+        font-size: 20px;
+    }
+
+    #footer {
+        grid-template-columns: 1fr 1fr 3fr;
+        column-gap: 10px;
+    }
+}
