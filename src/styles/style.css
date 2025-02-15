@@ -7,7 +7,8 @@
 }
 
 main {
-    height: 800px;
+    width: 90%;
+    margin: 0 5%;
 }
 
 #header {
@@ -30,6 +31,7 @@ nav > a {
     color: var(--color2);
     font-size: 25px;
     padding: 20px;
+    text-decoration: none;
 }
 
 nav > a:hover {
@@ -51,6 +53,7 @@ nav > a:hover {
     column-gap: 20px;
     background-color: var(--color3);
     color: var(--color2);
+    margin-top: 10px;
 }
 
 #social {
@@ -74,6 +77,143 @@ nav > a:hover {
     margin: 0 auto;
 }
 
+
+/* Home*/
+#banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    margin: 2% 0;
+    height: 400px;
+}
+
+#banner img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+}
+
+#banner p {
+    margin-right: 20px;
+    text-align: justify;
+}
+
+#banner button {
+    margin-top: 20px;
+}
+
+#banner h1 {
+    margin-top: 50px;
+}
+
+button {
+    margin: 0 auto;
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--color4);
+    color: var(--color2);
+    font-size: large;
+}
+
+button:hover {
+    background-color: var(--color2);
+    color: var(--color4);
+}
+
+#converter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 300px;
+}
+
+#converter img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 300px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.bitcoin {
+    grid-column: 2 / 3;
+    margin-top: -50px;
+}
+
+#currency-converter select, input {    
+    padding: 1%;
+    margin: 1%;
+    width: 25%;
+    background-color: var(--color2);
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+#currency-converter input {    
+    width: 10%;
+}
+
+#currency-converter button {   
+    width: 20%;
+    align-items: center;
+}
+
+.converted-value, .bitcoin {
+    font-size: 20px;
+}
+
+#converted-value, #bitcoin-price {
+    font-family: 25px;
+    color: var(--color4);
+}
+
+#text {
+    text-align: justify;
+}
+
+@media (max-width: 800px) {
+    #banner {
+        margin: 5% 0;
+    } 
+    
+    #banner p {
+        margin-right: 20px;
+        text-align: justify;
+    }
+    
+    #banner button {
+        margin-top: 0;
+    }
+    
+    #banner h1 {
+        margin-top: 0;
+    }
+
+    #converter {
+        column-gap: 5px;
+    }
+
+    #converter img {
+        height: 300px;
+        width: 100%;
+    }
+
+    #currency-converter select, input {    
+        width: 30%;
+        background-color: var(--color2);
+    }
+    
+    #currency-converter input {    
+        width: 100%;
+    }
+    
+    #currency-converter button {   
+        width: 25%;
+    }
+
+}
+
 @media (max-width: 705px) {
     #social {
         grid-template-rows: 1fr 1fr 1fr;
@@ -95,6 +235,73 @@ nav > a:hover {
         font-size: small;
     }
 }
+
+@media (max-width: 500px) {
+    #banner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    } 
+    
+    #banner p {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin: 10px 0px;
+    }
+    
+    #banner button {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        margin-top: 25px;
+    }
+    
+    #banner h1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #banner img {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #text {
+        margin-top: 220px;
+    }
+
+    #converter {
+        grid-template-columns: 1fr;
+        margin-bottom: 250px;
+    }
+    
+    #converter img {
+        grid-row: 1 / 2;
+        height: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .bitcoin {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        margin-top: -10px;
+    }
+    
+    #currency-converter select, input {  
+        width: 30%;
+    }
+    
+    #currency-converter input {    
+        width: 95%;
+        display: flex;
+        margin: 0 auto;
+    }
+    
+    #currency-converter button {   
+        width: 27%;
+        margin-top: 10px;
+    }
+}
+
 
 @media (max-width: 425px) {
     #header {
@@ -125,5 +332,17 @@ nav > a:hover {
     #footer {
         grid-template-columns: 1fr 1fr 3fr;
         column-gap: 10px;
+    }
+
+    #text {
+        margin-top: 250px;
+    }
+}
+
+@media (max-width: 320px) {
+   
+
+    #text {
+        margin-top: 270px;
     }
 }

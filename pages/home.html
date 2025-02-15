@@ -1,3 +1,42 @@
-<h1>
-    Welcome.
-</h1>
+<div id="banner">
+    <h1>
+        WDD 330 - News website
+    </h1>
+    <p>
+        Stay up to date with daily news. 
+        Here you will find information about what is happening around the world. 
+        Understand how this news can impact your daily life.
+        Every day important things happen in all of our lives, so our mission is to inform you about what is happening in politics, the environment, industry, research and many other things. 
+        Our vision is to become an online communication vehicle that allows young people and adults to access news without bureaucracy or bias.
+        We believe that informed people help resolve conflicts and provide better opportunities for themselves and others.
+    </p>
+    <button href="#" onclick="loadPage('news.html')">News</button>
+    <img src="/src/images/banner.png" alt="News Banner images">
+</div>
+<p id="text">
+    Every day important things happen in all of our lives, so our mission is to inform you about what is happening in politics, the environment, industry, research and many other things. 
+    Our vision is to become an online communication vehicle that allows young people and adults to access news without bureaucracy or bias.
+    We believe that informed people help resolve conflicts and provide better opportunities for themselves and others.
+</p>
+<div id="converter">
+    <img src="/src/images/newsImage.png" alt="">
+    <!-- Coin convertion -->
+    <div id="currency-converter">
+        <h2>Currency Converter</h2>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="from-currency">
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="BRL">BRL - Brazilian Real</option>
+        </select>
+        <span>to</span>
+        <select id="to-currency">
+            <option value="USD">USD - US Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="BRL">BRL - Brazilian Real</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+        <p class="converted-value">Converted Amount: <span id="converted-value">-</span></p>
+    </div>
+    <p class="bitcoin">Bitcoin Price now: <span id="bitcoin-price"> Loading...</span></p>
+</div>
