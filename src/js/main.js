@@ -32,8 +32,8 @@ function updateFooter() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadHTML("header", "public/partials/header.html");
-    loadHTML("footer", "public/partials/footer.html", updateFooter);
+    loadHTML("header", "src/public/partials/header.html");
+    loadHTML("footer", "src/public/partials/footer.html", updateFooter);
 
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page") || "home.html";
