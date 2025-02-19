@@ -66,7 +66,7 @@ function convertCurrency() {
         return;
     }
 
-    const apiKey = "18e72fe75bc4bd57f951b8f7";  // Substitua pela sua chave da API
+    const apiKey = "18e72fe75bc4bd57f951b8f7";
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${fromCurrency}/${toCurrency}/${amount}`;
 
     fetch(url)
