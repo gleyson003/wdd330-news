@@ -11,7 +11,7 @@ function loadHTML(id, url, callback) {
 
 // Use main dynamic
 function loadPage(page) {
-    loadHTML("content", `/pages/${page}`);
+    loadHTML("content", `pages/${page}`);
     history.pushState({ page: page }, "", `?page=${page}`);
 }
 
@@ -32,8 +32,8 @@ function updateFooter() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    loadHTML("header", "src/public/partials/header.html");
-    loadHTML("footer", "src/public/partials/footer.html", updateFooter);
+    loadHTML("header", "partials/header.html");
+    loadHTML("footer", "partials/footer.html", updateFooter);
 
     const params = new URLSearchParams(window.location.search);
     const page = params.get("page") || "home.html";
